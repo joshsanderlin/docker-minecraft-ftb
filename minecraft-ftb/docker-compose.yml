@@ -1,15 +1,15 @@
 services:
   minecraft-ftb:
-    image: flobernd/minecraft-ftb:latest
+    image: joshsanderlin/minecraft-ftb:latest
     container_name: minecraft-ftb
     restart: unless-stopped
     tty: true
     stdin_open: true
     stop_grace_period: 1m
     environment:
-      FTB_MODPACK_ID: 126
+      FTB_MODPACK_ID: 125
       ACCEPT_MOJANG_EULA: 1
-      USER_JVM_ARGS: "-Xms1G -Xmx4G"
+      USER_JVM_ARGS: "-Xms8G -Xmx16G"
     volumes:
       - ./volume:/var/lib/minecraft:rw
     ports:
